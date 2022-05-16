@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA608 - Assignment 5</title>
+    <link rel="stylesheet" href="assignment5.css" />
+
+    <!-- This version has way too many modifications, which make existing code in books not work properly -->
+    <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="./assignment5.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>DATA608 - Assignment 5</h1>
+      <h3>Esteban Aramayo</h3>
+
+      <h2>Beginner</h2>
+
+      <div id="question1">
+        <h3>Question 1</h3>
+
+        <form action="" id="form1">
+          <fieldset>
+            <legend>Word Reversal</legend>
+            <br />
+            <label for="WordInput">Enter a word:</label>
+            <input
+              type="text"
+              id="WordInput"
+              name="WordInput"
+              required
+            /><br /><br />
+            <input
+              type="button"
+              value="Reverse Word"
+              id="submitWord"
+              onclick="reverseWord()"
+            /><br /><br />
+            <label for="ReversedWord">Reversed Word:</label>
+            <input type="text" id="ReversedWord" name="ReversedWord" readonly />
+
+            <br /><br />
+          </fieldset>
+        </form>
+        <br />
+      </div>
+      <div id="question2">
+        <h3>Question 2</h3>
+        <form action="" id="form2">
+          <fieldset>
+            <legend>First twenty multiples of a number</legend>
+            <br />
+            <label for="NumberInput">Enter a number:</label>
+            <input
+              type="text"
+              id="NumberInput"
+              name="NumberInput"
+            /><br /><br />
+            <input
+              type="button"
+              value="Get Multiples"
+              id="submitNumber"
+              onclick="getMultiples()"
+            /><br /><br />
+          </fieldset>
+        </form>
+        <div id="multiplesTable"><table></table></div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Intermediate</h2>
+
+      <div id="question3">
+        <h3>Question 3</h3>
+        <p>
+          Load the presidents.csv data and display the data as an html table
+        </p>
+
+        <script src="president.js"></script>
+      </div>
+
+      <div id="question4">
+        <h3>Question 4</h3>
+
+        <form action="" id="form4">
+          <fieldset>
+            <legend>
+              Returns president’s height & weight when you type his name in
+            </legend>
+            <br />
+            <label for="NameInput">Enter a president's name:</label>
+            <input type="text" id="NameInput" name="NameInput" /><br /><br />
+            <input
+              type="button"
+              value="Search"
+              id="submitName"
+              onclick="getPresidentData()"
+            /><br /><br />
+          </fieldset>
+        </form>
+        <p>Results</p>
+        <table id="searchResult">
+          <thead>
+            <th>Name</th>
+            <th>Height</th>
+            <th>Weight</th>
+          </thead>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+      </div>
+    </div>
+  </body>
+</html>
